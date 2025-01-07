@@ -1,0 +1,117 @@
+@tailwind components;
+@tailwind utilities;
+
+/* Buttons */
+.filament-fullcalendar--calendar.fc .fc-button {
+    @apply transition-colors outline-none rounded-lg font-medium text-sm text-primary-500 min-h-[2.25rem] px-4 py-1;
+}
+
+.filament-fullcalendar--calendar.fc .fc-next-button {
+    @apply !border-l-primary-400;
+}
+
+.filament-fullcalendar--calendar.fc .fc-button-primary {
+    @apply bg-primary-400/20 border-primary-500 hover:bg-primary-500 hover:border-primary-500 hover:shadow-inner;
+}
+
+.filament-fullcalendar--calendar.fc .fc-button-primary:disabled {
+    @apply cursor-not-allowed bg-primary-400/20 text-primary-500 opacity-70 border-primary-400;
+}
+
+.filament-fullcalendar--calendar.fc
+    .fc-button-primary:not(:disabled).fc-button-active,
+.filament-fullcalendar--calendar.fc .fc-button-primary:not(:disabled):active {
+    @apply !text-white shadow-inner cursor-default !bg-primary-500 border-primary-400;
+}
+
+.filament-fullcalendar--calendar.fc .fc-button-primary:focus,
+.filament-fullcalendar--calendar.fc .fc-button-primary:not(:disabled):focus,
+.filament-fullcalendar--calendar.fc
+    .fc-button-primary:not(:disabled).fc-button-active:focus,
+.filament-fullcalendar--calendar.fc
+    .fc-button-primary:not(:disabled):active:focus {
+    @apply outline-none bg-primary-500 border-primary-500 text-primary-500 ring-0;
+}
+
+/* Event Blocks */
+.filament-fullcalendar--calendar.fc .fc-daygrid-dot-event {
+    @apply cursor-pointer hover:bg-primary-500/30;
+}
+.filament-fullcalendar--calendar.fc .fc-daygrid-dot-event .fc-event-title {
+    @apply pr-1 text-xs font-medium text-gray-600 dark:text-gray-300;
+}
+
+.filament-fullcalendar--calendar.fc .fc-daygrid-dot-event .fc-event-time {
+    @apply text-xs text-gray-500 dark:text-gray-400;
+}
+
+.filament-fullcalendar--calendar.fc .fc-daygrid-block-event .fc-event-title {
+    @apply pt-0.5 pl-2 text-xs font-semibold text-gray-500 dark:text-gray-300;
+}
+.filament-fullcalendar--calendar.fc .fc-daygrid-block-event .fc-event-time {
+    @apply pt-0.5 pl-1 text-xs font-normal text-gray-500 dark:text-gray-300;
+}
+
+.filament-fullcalendar--calendar.fc .fc-daygrid-block-event {
+    @apply cursor-pointer hover:opacity-80;
+}
+
+.filament-fullcalendar--calendar.fc .fc-daygrid-more-link {
+    @apply ml-1 text-xs font-semibold text-gray-600 dark:text-gray-400;
+}
+
+/* Week Blocks */
+.filament-fullcalendar--calendar.fc .fc-event:hover,
+.filament-fullcalendar--calendar.fc .fc-list-event:hover td {
+    @apply font-medium cursor-pointer bg-primary-100 dark:bg-primary-500/30;
+}
+
+.filament-fullcalendar--calendar.fc .fc-list-event-title,
+.filament-fullcalendar--calendar.fc .fc-list-event-time {
+    @apply pt-2.5 text-sm;
+}
+
+.filament-fullcalendar--calendar.fc .fc-daygrid-week-number {
+    @apply py-1.5 bg-white text-xs text-gray-500 opacity-70 dark:!bg-gray-800 italic dark:text-gray-400;
+}
+
+/* Day Blocks */
+
+.filament-fullcalendar--calendar.fc .fc-daygrid-day-number {
+    @apply text-sm text-gray-500 dark:text-gray-400 hover:no-underline hover:text-primary-500;
+}
+
+.filament-fullcalendar--calendar.fc .fc-day-today .fc-daygrid-day-number {
+    @apply font-semibold !text-primary-500;
+}
+
+.filament-fullcalendar--calendar.fc .fc-daygrid-day.fc-day-today,
+.filament-fullcalendar--calendar.fc .fc-highlight {
+    @apply bg-primary-50 dark:bg-primary-500/20;
+}
+
+/* Border Blocks */
+:root {
+    --fc-border-color: #6b728050;
+}
+
+.filament-fullcalendar--calendar.fc th,
+.fc-theme-standard .fc-list-day-cushion {
+    @apply dark:border-gray-400 dark:bg-gray-200/10 bg-gray-200/10;
+}
+
+.filament-fullcalendar--calendar.fc td.fc-daygrid-day.fc-day {
+    @apply dark:border-gray-500;
+}
+
+.filament-fullcalendar--calendar.fc .fc-daygrid-day-number {
+    @apply text-sm text-gray-500 dark:text-gray-400;
+}
+
+.fc-theme-standard .fc-scrollgrid {
+    @apply dark:!border-gray-400 dark:border-r dark:border-b;
+}
+
+.fc-theme-standard .fc-popover {
+    @apply dark:!bg-gray-800 dark:!border-gray-400;
+}
